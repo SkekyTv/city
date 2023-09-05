@@ -13,7 +13,7 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${rt}`);
 });
 
-app.use(router.get('/geocode', geocode.get));
+app.use(router.get('/geocode/city', geocode.city));
 
 app.listen(
   config.port,

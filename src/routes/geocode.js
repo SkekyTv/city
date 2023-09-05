@@ -2,7 +2,7 @@ import axios from 'axios';
 import config from '../../config';
 
 const geocode = {
-  get: async (ctx) => {
+  city: async (ctx) => {
     const { city } = ctx.query;
     let response;
     try {
@@ -15,9 +15,10 @@ const geocode = {
     } catch (e) {
       ctx.throw(e);
     }
-    ctx.body = {
-      geocode: response.data,
-    };
+
+    // Keep only city
+    const filteredGeocode = response.data.results.find((result) => result.types.includes('locality'));
+    ctx.body = filteredGeocode;
   },
 };
 
