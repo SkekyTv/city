@@ -1,4 +1,4 @@
-#City
+# City
 
 Basic api to handle city operation with gmap api.
 
@@ -20,5 +20,5 @@ Env var requirement :
 |-----------------------|-------------------------------|---------------|
 | GMAP_API_ENDPOINT     | google map api endpoint       |
 | GMAP_API_KEY          | google map api key            |
-| HOST                  | MS host default "localhost"   | `locahost`
-| PORT                  | MS port default 3000          | `3010`
+| HOST                  | MS host                       | `0.0.0.0`
+| PORT                  | MS port                       | `3010`
